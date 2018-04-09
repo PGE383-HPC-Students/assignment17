@@ -1,5 +1,7 @@
 # Homework Assignment 16
 
+[![Build Status](https://travis-ci.com/PGE383-HPC/assignment16.svg?token=SnMGq692xXXqxzyE6QSj&branch=master)](https://travis-ci.com/PGE383-HPC/assignment16)
+
 When input data is too large to fit into memory on a single node, it's common to partition and/or store it in a collection of smaller 
 files that can be processed in parallel.  In this repository, you will find four files `ss.0.0.dat`, `ss.0.1.dat`, `ss.0.2.dat`, `ss.0.3.dat`.  These
 files each contain one-forth of the stress-strain curve that we manipulated in [Assignment 7](https://github.com/PGE383-HPC/assignment7). 

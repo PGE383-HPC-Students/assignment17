@@ -22,11 +22,9 @@ class Max():
 
         my_length = my_stress.shape[0]
 
-        global_length = self.comm.SumAll(my_length)
+        standard_map = Epetra.Map(-1, my_length, 0, self.comm)
 
-        standard_map = Epetra.Map(global_length, my_length, 0, self.comm)
-
-        self.stress = Epetra.Vector(standard_map, my_stress)
+        self.stress = Epetra.Vector(Epetra.View, standard_map, my_stress)
 
 
     def get_max(self):

@@ -20,7 +20,7 @@ class TestMax(unittest.TestCase):
 
         max_value = self.T.get_max()
 
-        self.assertAlmostEqual(max_value, 150571.37930620485, 2)
+        self.assertAlmostEqual(max_value, 158314.35447835593, 2)
 
 
 if __name__ == '__main__':
