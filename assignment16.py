@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 import numpy as np
-import scipy.integrate
 
 from PyTrilinos import Epetra
 
