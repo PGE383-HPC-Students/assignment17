@@ -1,4 +1,4 @@
-# Homework Assignment 16
+# Homework Assignment 17
 
 [![Build Status](https://travis-ci.com/PGE383-HPC/assignment17.svg?token=SnMGq692xXXqxzyE6QSj&branch=master)](https://travis-ci.com/PGE383-HPC/assignment17)
 
