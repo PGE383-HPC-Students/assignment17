@@ -3,7 +3,7 @@ import os
 import unittest
 from PyTrilinos import Epetra
 
-from assignment16 import Max
+from assignment17 import Max
 
 class TestMax(unittest.TestCase):
 
