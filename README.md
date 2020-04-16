@@ -7,8 +7,7 @@ files that can be processed in parallel.  In this repository, you will find four
 files each contain one-forth of the stress-strain curve that we manipulated in [Assignment 7](https://github.com/PGE383-HPC-Students/assignment7). 
 
 Your task in this assignment is to read in the data in parallel from the files, then create an `Epetra.Map` and associated `Epetra.Vector` to store the data.  
-Assign the `Epetra.Vector` to a class member variable called `stress`.  Once the data is stored in an `Epetra.Vector` is can easily be queried for its overall 
-maximum value using the class function `MaxValue()`.  
+Assign the `Epetra.Vector` to a class member variable called `stress`.  Use the `Epetra.Copy` argument for robustness when instantiating the `Epetra.Vector` class.  Once the data is stored in an `Epetra.Vector` is can easily be queried for its overall maximum value using the class function `MaxValue()`.  
 
 
 ## Testing

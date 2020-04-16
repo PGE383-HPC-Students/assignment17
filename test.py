@@ -9,8 +9,9 @@ class TestMax(unittest.TestCase):
 
     def setUp(self):
 
-        comm = Epetra.PyComm()
-        self.T = Max('ss', comm)
+        self.comm = Epetra.PyComm()
+        self.comm.Barrier()
+        self.T = Max('ss', self.comm)
     
     def tearDown(self):
 

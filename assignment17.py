@@ -16,19 +16,19 @@ class Max():
 
     def load_data(self, basename):
 
-        my_data = np.loadtxt(basename + '.' + str(self.rank) + '.' + str(self.size) + '.dat')
+        my_data = np.loadtxt('{}.{}.{}.dat'.format(basename, self.rank, self.size))
 
-        my_stress = my_data[:,1]
+        my_stress = my_data[:,1].copy()
 
         my_length = my_stress.shape[0]
 
         standard_map = Epetra.Map(-1, my_length, 0, self.comm)
 
-        self.stress = Epetra.Vector(Epetra.View, standard_map, my_stress)
+        self.stress = Epetra.Vector(Epetra.Copy, standard_map, my_stress)
 
 
     def get_max(self):
-
+                             
         return self.stress.MaxValue()[0]
 
 
