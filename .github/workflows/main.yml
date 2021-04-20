@@ -16,4 +16,4 @@ jobs:
       - name: Run Tests 
         shell: bash -l {0}
         run: |
-          docker run --rm -v `pwd`:/var/pytri -it johntfoster/pytrilinos:latest mpiexec -np 4 python test.py
+          docker run --rm -v `pwd`:/var/pytri -t johntfoster/pytrilinos:latest mpiexec -np 4 python test.py
