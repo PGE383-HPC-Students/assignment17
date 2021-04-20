@@ -11,25 +11,10 @@ class Max():
         self.rank = comm.MyPID()
         self.size = comm.NumProc()
 
-        self.load_data(basename)
-
-
-    def load_data(self, basename):
-
-        my_data = np.loadtxt('{}.{}.{}.dat'.format(basename, self.rank, self.size))
-
-        my_stress = my_data[:,1].copy()
-
-        my_length = my_stress.shape[0]
-
-        standard_map = Epetra.Map(-1, my_length, 0, self.comm)
-
-        self.stress = Epetra.Vector(Epetra.Copy, standard_map, my_stress)
-
 
     def get_max(self):
-                             
-        return self.stress.MaxValue()[0]
+
+        return #maximum value across all procs
 
 
 
